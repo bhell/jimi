@@ -6,9 +6,13 @@ from django.utils.translation import ugettext as _
 class Node(MPTTModel):
     """Catalog node"""
     KIND_CHOICES = (("C", _("Category")),
-                    ("P", _("Product")))
+                    ("P", _("Product")),
+                    ("V", _("Product variation")))
     name = models.CharField(_("Name"), max_length=128)
-    kind = models.CharField(_("Kind"), max_length=1, choices=KIND_CHOICES)
+    kind = models.CharField(_("Kind"),
+                            max_length=1,
+                            choices=KIND_CHOICES,
+                            db_index=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
     slug = models.SlugField(max_length=128,
                             unique=True,
@@ -93,7 +97,10 @@ class Node(MPTTModel):
 
     @models.permalink
     def get_absolute_url(self):
-        return ("node", (), {'slug': self.slug})
+        if self.kind == "V":  # Parent URL for variations
+            return ("node", (), {'slug': self.get_ancestors(ascending=True)[0].slug})
+        else:
+            return ("node", (), {'slug': self.slug})
 
 
 class Category(Node):
@@ -113,5 +120,8 @@ class Product(Node):
         proxy = True
 
     def save(self, *args, **kwargs):
-        self.kind = "P"
+        if self.parent.kind == "P":
+            self.kind = "V"
+        else:
+            self.kind = "P"
         super(Product, self).save(*args, **kwargs)

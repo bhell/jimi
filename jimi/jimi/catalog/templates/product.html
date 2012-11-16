@@ -2,6 +2,10 @@
 {% load mptt_tags %}
 {% block body %}
 
-{{ name }} - {{ price }} - {{ in_stock }} in stock
-{{ descendants }}
+{{ node.name }} - {{ node.price }} - {{ node.in_stock }} in stock
+<dl>
+  <dt>Categories</dt><dd><ul>{% for c in ancestors %}<li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>{% endfor %}</ul></dd>
+  <dt>Variations</dt><dd><ul>{% for c in variations %}<li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>{% endfor %}</ul></dd>
+  <dt>URL</dt><dd>{{ node.get_absolute_url }}</dd>
+</dl>
 {% endblock body %}

@@ -2,5 +2,10 @@
 {% load mptt_tags %}
 {% block body %}
 {{ node.name }} - {{ node.price }} - {{ node.in_stock }} in stock
-{{ descendants }}
+<dl>
+  <dt>Ancestors</dt><dd><ul>{% for n in ancestors %}<li><a href="{{ n.get_absolute_url }}">{{ n.name }}</a></li>{% endfor %}</ul></dd>
+  <dt>Categories</dt><dd><ul>{% for n in categories %}<li><a href="{{ n.get_absolute_url }}">{{ n.name }}</a></li>{% endfor %}</ul></dd>
+  <dt>Products</dt><dd><ul>{% for n in products %}<li><a href="{{ n.get_absolute_url }}">{{ n.name }}</a></li>{% endfor %}</ul></dd>
+  <dt>URL</dt><dd>{{ node.get_absolute_url }}</dd>
+</dl>
 {% endblock body %}
