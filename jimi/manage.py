@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/Users/beni/Documents/Code/Web/Jimi/VENV-jimi/bin/python
 import os
 import sys
 

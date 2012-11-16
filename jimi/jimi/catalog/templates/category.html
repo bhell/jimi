@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load mptt_tags %}
+{% block body %}
+{{ node.name }} - {{ node.price }} - {{ node.in_stock }} in stock
+{{ descendants }}
+{% endblock body %}
