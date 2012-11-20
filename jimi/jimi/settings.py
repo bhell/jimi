@@ -147,4 +147,4 @@ LOGGING = {
 }
 
 # Jimi specific settings
-DEFAULT_CURRENCY = {"code": "SEK", "name": _("Swedish Krona"), "abbr": "kr"}
+SHOP_CURRENCY = "SEK"

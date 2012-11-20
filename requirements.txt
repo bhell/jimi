@@ -1,5 +1,12 @@
+# PIP installable
 django
 South
 django-mptt
+django-countries
 
+# Manual installation
+python-money
+
+# Not needed for re-distribution
 MySQL-python
+coverage

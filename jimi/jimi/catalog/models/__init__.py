@@ -4,7 +4,6 @@ from jimi.price.fields import MoneyField
 from django.utils.translation import ugettext as _
 
 
-
 class Node(MPTTModel):
     """Catalog node"""
     KIND_CHOICES = (("C", _("Category")),
@@ -31,8 +30,6 @@ class Node(MPTTModel):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     price_fragment = MoneyField(_("Price"),
-                                max_digits=9,
-                                decimal_places=2,
                                 default=0.00,
                                 help_text=_("Total price is accumulated from fragments spanning categories, product and variation"))
     fragment_in_stock = models.IntegerField(_("Stock"),
