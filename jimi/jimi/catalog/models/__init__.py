@@ -1,6 +1,8 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from jimi.price.fields import MoneyField
 from django.utils.translation import ugettext as _
+
 
 
 class Node(MPTTModel):
@@ -28,7 +30,7 @@ class Node(MPTTModel):
                                         help_text=_("Content for description meta tag"))
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    price_fragment = models.DecimalField(_("Price"),
+    price_fragment = MoneyField(_("Price"),
                                 max_digits=9,
                                 decimal_places=2,
                                 default=0.00,

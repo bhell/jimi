@@ -1,4 +1,5 @@
 # Django settings for jimi project.
+from django.utils.translation import ugettext as _
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -111,6 +112,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'jimi.catalog',
+    'jimi.price',
     'south',
     'mptt',
 )
@@ -143,3 +145,6 @@ LOGGING = {
         },
     }
 }
+
+# Jimi specific settings
+DEFAULT_CURRENCY = {"code": "SEK", "name": _("Swedish Krona"), "abbr": "kr"}

@@ -1,0 +1,748 @@
+- model: price.Country
+  code: AF
+  fields:
+    name: Afghanistan
+  code: AX
+  fields:
+    name: Åland Islands
+  code: AL
+  fields:
+    name: Albania
+  code: DZ
+  fields:
+    name: Algeria
+  code: AS
+  fields:
+    name: American Samoa
+  code: AD
+  fields:
+    name: Andorra
+  code: AO
+  fields:
+    name: Angola
+  code: AI
+  fields:
+    name: Anguilla
+  code: AQ
+  fields:
+    name: Antarctica
+  code: AG
+  fields:
+    name: Antigua and Barbuda
+  code: AR
+  fields:
+    name: Argentina
+  code: AM
+  fields:
+    name: Armenia
+  code: AW
+  fields:
+    name: Aruba
+  code: AU
+  fields:
+    name: Australia
+  code: AT
+  fields:
+    name: Austria
+  code: AZ
+  fields:
+    name: Azerbaijan
+  code: BS
+  fields:
+    name: Bahamas
+  code: BH
+  fields:
+    name: Bahrain
+  code: BD
+  fields:
+    name: Bangladesh
+  code: BB
+  fields:
+    name: Barbados
+  code: BY
+  fields:
+    name: Belarus
+  code: BE
+  fields:
+    name: Belgium
+  code: BZ
+  fields:
+    name: Belize
+  code: BJ
+  fields:
+    name: Benin
+  code: BM
+  fields:
+    name: Bermuda
+  code: BT
+  fields:
+    name: Bhutan
+  code: BO
+  fields:
+    name: Bolivia, Plurinational State of
+  code: BQ
+  fields:
+    name: Bonaire, Sint Eustatius and Saba
+  code: BA
+  fields:
+    name: Bosnia and Herzegovina
+  code: BW
+  fields:
+    name: Botswana
+  code: BV
+  fields:
+    name: Bouvet Island
+  code: BR
+  fields:
+    name: Brazil
+  code: IO
+  fields:
+    name: British Indian Ocean Territory
+  code: BN
+  fields:
+    name: Brunei Darussalam
+  code: BG
+  fields:
+    name: Bulgaria
+  code: BF
+  fields:
+    name: Burkina Faso
+  code: BI
+  fields:
+    name: Burundi
+  code: KH
+  fields:
+    name: Cambodia
+  code: CM
+  fields:
+    name: Cameroon
+  code: CA
+  fields:
+    name: Canada
+  code: CV
+  fields:
+    name: Cape Verde
+  code: KY
+  fields:
+    name: Cayman Islands
+  code: CF
+  fields:
+    name: Central African Republic
+  code: TD
+  fields:
+    name: Chad
+  code: CL
+  fields:
+    name: Chile
+  code: CN
+  fields:
+    name: China
+  code: CX
+  fields:
+    name: Christmas Island
+  code: CC
+  fields:
+    name: Cocos (Keeling) Islands
+  code: CO
+  fields:
+    name: Colombia
+  code: KM
+  fields:
+    name: Comoros
+  code: CG
+  fields:
+    name: Congo
+  code: CD
+  fields:
+    name: Congo, The Democratic Republic of the
+  code: CK
+  fields:
+    name: Cook Islands
+  code: CR
+  fields:
+    name: Costa Rica
+  code: CI
+  fields:
+    name: Côte D'ivoire
+  code: HR
+  fields:
+    name: Croatia
+  code: CU
+  fields:
+    name: Cuba
+  code: CW
+  fields:
+    name: Curaçao
+  code: CY
+  fields:
+    name: Cyprus
+  code: CZ
+  fields:
+    name: Czech Republic
+  code: DK
+  fields:
+    name: Denmark
+  code: DJ
+  fields:
+    name: Djibouti
+  code: DM
+  fields:
+    name: Dominica
+  code: DO
+  fields:
+    name: Dominican Republic
+  code: EC
+  fields:
+    name: Ecuador
+  code: EG
+  fields:
+    name: Egypt
+  code: SV
+  fields:
+    name: El Salvador
+  code: GQ
+  fields:
+    name: Equatorial Guinea
+  code: ER
+  fields:
+    name: Eritrea
+  code: EE
+  fields:
+    name: Estonia
+  code: ET
+  fields:
+    name: Ethiopia
+  code: FK
+  fields:
+    name: Falkland Islands (Malvinas)
+  code: FO
+  fields:
+    name: Faroe Islands
+  code: FJ
+  fields:
+    name: Fiji
+  code: FI
+  fields:
+    name: Finland
+  code: FR
+  fields:
+    name: France
+  code: GF
+  fields:
+    name: French Guiana
+  code: PF
+  fields:
+    name: French Polynesia
+  code: TF
+  fields:
+    name: French Southern Territories
+  code: GA
+  fields:
+    name: Gabon
+  code: GM
+  fields:
+    name: Gambia
+  code: GE
+  fields:
+    name: Georgia
+  code: DE
+  fields:
+    name: Germany
+  code: GH
+  fields:
+    name: Ghana
+  code: GI
+  fields:
+    name: Gibraltar
+  code: GR
+  fields:
+    name: Greece
+  code: GL
+  fields:
+    name: Greenland
+  code: GD
+  fields:
+    name: Grenada
+  code: GP
+  fields:
+    name: Guadeloupe
+  code: GU
+  fields:
+    name: Guam
+  code: GT
+  fields:
+    name: Guatemala
+  code: GG
+  fields:
+    name: Guernsey
+  code: GN
+  fields:
+    name: Guinea
+  code: GW
+  fields:
+    name: Guinea-bissau
+  code: GY
+  fields:
+    name: Guyana
+  code: HT
+  fields:
+    name: Haiti
+  code: HM
+  fields:
+    name: Heard Island and McDonald Islands
+  code: VA
+  fields:
+    name: Holy See (Vatican City State)
+  code: HN
+  fields:
+    name: Honduras
+  code: HK
+  fields:
+    name: Hong Kong
+  code: HU
+  fields:
+    name: Hungary
+  code: IS
+  fields:
+    name: Iceland
+  code: IN
+  fields:
+    name: India
+  code: ID
+  fields:
+    name: Indonesia
+  code: IR
+  fields:
+    name: Iran, Islamic Republic of
+  code: IQ
+  fields:
+    name: Iraq
+  code: IE
+  fields:
+    name: Ireland
+  code: IM
+  fields:
+    name: Isle of Man
+  code: IL
+  fields:
+    name: Israel
+  code: IT
+  fields:
+    name: Italy
+  code: JM
+  fields:
+    name: Jamaica
+  code: JP
+  fields:
+    name: Japan
+  code: JE
+  fields:
+    name: Jersey
+  code: JO
+  fields:
+    name: Jordan
+  code: KZ
+  fields:
+    name: Kazakhstan
+  code: KE
+  fields:
+    name: Kenya
+  code: KI
+  fields:
+    name: Kiribati
+  code: KP
+  fields:
+    name: Korea, Democratic People's Republic of
+  code: KR
+  fields:
+    name: Korea, Republic of
+  code: KW
+  fields:
+    name: Kuwait
+  code: KG
+  fields:
+    name: Kyrgyzstan
+  code: LA
+  fields:
+    name: Lao People's Democratic Republic
+  code: LV
+  fields:
+    name: Latvia
+  code: LB
+  fields:
+    name: Lebanon
+  code: LS
+  fields:
+    name: Lesotho
+  code: LR
+  fields:
+    name: Liberia
+  code: LY
+  fields:
+    name: Libya
+  code: LI
+  fields:
+    name: Liechtenstein
+  code: LT
+  fields:
+    name: Lithuania
+  code: LU
+  fields:
+    name: Luxembourg
+  code: MO
+  fields:
+    name: Macao
+  code: MK
+  fields:
+    name: Macedonia, The Former Yugoslav Republic of
+  code: MG
+  fields:
+    name: Madagascar
+  code: MW
+  fields:
+    name: Malawi
+  code: MY
+  fields:
+    name: Malaysia
+  code: MV
+  fields:
+    name: Maldives
+  code: ML
+  fields:
+    name: Mali
+  code: MT
+  fields:
+    name: Malta
+  code: MH
+  fields:
+    name: Marshall Islands
+  code: MQ
+  fields:
+    name: Martinique
+  code: MR
+  fields:
+    name: Mauritania
+  code: MU
+  fields:
+    name: Mauritius
+  code: YT
+  fields:
+    name: Mayotte
+  code: MX
+  fields:
+    name: Mexico
+  code: FM
+  fields:
+    name: Micronesia, Federated States of
+  code: MD
+  fields:
+    name: Moldova, Republic of
+  code: MC
+  fields:
+    name: Monaco
+  code: MN
+  fields:
+    name: Mongolia
+  code: ME
+  fields:
+    name: Montenegro
+  code: MS
+  fields:
+    name: Montserrat
+  code: MA
+  fields:
+    name: Morocco
+  code: MZ
+  fields:
+    name: Mozambique
+  code: MM
+  fields:
+    name: Myanmar
+  code: NA
+  fields:
+    name: Namibia
+  code: NR
+  fields:
+    name: Nauru
+  code: NP
+  fields:
+    name: Nepal
+  code: NL
+  fields:
+    name: Netherlands
+  code: NC
+  fields:
+    name: New Caledonia
+  code: NZ
+  fields:
+    name: New Zealand
+  code: NI
+  fields:
+    name: Nicaragua
+  code: NE
+  fields:
+    name: Niger
+  code: NG
+  fields:
+    name: Nigeria
+  code: NU
+  fields:
+    name: Niue
+  code: NF
+  fields:
+    name: Norfolk Island
+  code: MP
+  fields:
+    name: Northern Mariana Islands
+  code: NO
+  fields:
+    name: Norway
+  code: OM
+  fields:
+    name: Oman
+  code: PK
+  fields:
+    name: Pakistan
+  code: PW
+  fields:
+    name: Palau
+  code: PS
+  fields:
+    name: Palestinian Territory, Occupied
+  code: PA
+  fields:
+    name: Panama
+  code: PG
+  fields:
+    name: Papua New Guinea
+  code: PY
+  fields:
+    name: Paraguay
+  code: PE
+  fields:
+    name: Peru
+  code: PH
+  fields:
+    name: Philippines
+  code: PN
+  fields:
+    name: Pitcairn
+  code: PL
+  fields:
+    name: Poland
+  code: PT
+  fields:
+    name: Portugal
+  code: PR
+  fields:
+    name: Puerto Rico
+  code: QA
+  fields:
+    name: Qatar
+  code: RE
+  fields:
+    name: Réunion
+  code: RO
+  fields:
+    name: Romania
+  code: RU
+  fields:
+    name: Russian Federation
+  code: RW
+  fields:
+    name: Rwanda
+  code: BL
+  fields:
+    name: Saint Barthélemy
+  code: SH
+  fields:
+    name: Saint Helena, Ascension and Tristan Da Cunha
+  code: KN
+  fields:
+    name: Saint Kitts and Nevis
+  code: LC
+  fields:
+    name: Saint Lucia
+  code: MF
+  fields:
+    name: Saint Martin (French Part)
+  code: PM
+  fields:
+    name: Saint Pierre and Miquelon
+  code: VC
+  fields:
+    name: Saint Vincent and the Grenadines
+  code: WS
+  fields:
+    name: Samoa
+  code: SM
+  fields:
+    name: San Marino
+  code: ST
+  fields:
+    name: Sao Tome and Principe
+  code: SA
+  fields:
+    name: Saudi Arabia
+  code: SN
+  fields:
+    name: Senegal
+  code: RS
+  fields:
+    name: Serbia
+  code: SC
+  fields:
+    name: Seychelles
+  code: SL
+  fields:
+    name: Sierra Leone
+  code: SG
+  fields:
+    name: Singapore
+  code: SX
+  fields:
+    name: Sint Maarten (Dutch Part)
+  code: SK
+  fields:
+    name: Slovakia
+  code: SI
+  fields:
+    name: Slovenia
+  code: SB
+  fields:
+    name: Solomon Islands
+  code: SO
+  fields:
+    name: Somalia
+  code: ZA
+  fields:
+    name: South Africa
+  code: GS
+  fields:
+    name: South Georgia and the South Sandwich Islands
+  code: SS
+  fields:
+    name: South Sudan
+  code: ES
+  fields:
+    name: Spain
+  code: LK
+  fields:
+    name: Sri Lanka
+  code: SD
+  fields:
+    name: Sudan
+  code: SR
+  fields:
+    name: Suriname
+  code: SJ
+  fields:
+    name: Svalbard and Jan Mayen
+  code: SZ
+  fields:
+    name: Swaziland
+  code: SE
+  fields:
+    name: Sweden
+  code: CH
+  fields:
+    name: Switzerland
+  code: SY
+  fields:
+    name: Syrian Arab Republic
+  code: TW
+  fields:
+    name: Taiwan, Province of China
+  code: TJ
+  fields:
+    name: Tajikistan
+  code: TZ
+  fields:
+    name: Tanzania, United Republic of
+  code: TH
+  fields:
+    name: Thailand
+  code: TL
+  fields:
+    name: Timor-leste
+  code: TG
+  fields:
+    name: Togo
+  code: TK
+  fields:
+    name: Tokelau
+  code: TO
+  fields:
+    name: Tonga
+  code: TT
+  fields:
+    name: Trinidad and Tobago
+  code: TN
+  fields:
+    name: Tunisia
+  code: TR
+  fields:
+    name: Turkey
+  code: TM
+  fields:
+    name: Turkmenistan
+  code: TC
+  fields:
+    name: Turks and Caicos Islands
+  code: TV
+  fields:
+    name: Tuvalu
+  code: UG
+  fields:
+    name: Uganda
+  code: UA
+  fields:
+    name: Ukraine
+  code: AE
+  fields:
+    name: United Arab Emirates
+  code: GB
+  fields:
+    name: United Kingdom
+  code: US
+  fields:
+    name: United States
+  code: UM
+  fields:
+    name: United States Minor Outlying Islands
+  code: UY
+  fields:
+    name: Uruguay
+  code: UZ
+  fields:
+    name: Uzbekistan
+  code: VU
+  fields:
+    name: Vanuatu
+  code: VE
+  fields:
+    name: Venezuela, Bolivarian Republic of
+  code: VN
+  fields:
+    name: Viet Nam
+  code: VG
+  fields:
+    name: Virgin Islands, British
+  code: VI
+  fields:
+    name: Virgin Islands, U.S.
+  code: WF
+  fields:
+    name: Wallis and Futuna
+  code: EH
+  fields:
+    name: Western Sahara
+  code: YE
+  fields:
+    name: Yemen
+  code: ZM
+  fields:
+    name: Zambia
+  code: ZW
+  fields:
+    name: Zimbabwe
