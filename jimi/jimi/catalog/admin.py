@@ -26,7 +26,7 @@ class CategoryAdmin(NodeAdmin):
     #self.exclude += ("fragment_in_stock", "fragment_pending_customer", "fragment_pending_supplier",)
 
     def queryset(self, request):
-        return self.model.objects.filter(kind="C")
+        return self.model.objects.filter(kind=Node.CATEGORY)
 
 
 class ProductAdmin(NodeAdmin):
@@ -34,7 +34,7 @@ class ProductAdmin(NodeAdmin):
     #    exclude += ("fragment_in_stock", "fragment_pending_customer", "fragment_pending_supplier",)
 
     def queryset(self, request):
-        return self.model.objects.filter(kind="P")
+        return self.model.objects.filter(kind=Node.PRODUCT)
 
 
 admin.site.register(Category, CategoryAdmin)

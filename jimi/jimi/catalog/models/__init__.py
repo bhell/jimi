@@ -6,9 +6,12 @@ from django.utils.translation import ugettext as _
 
 class Node(MPTTModel):
     """Catalog node"""
-    KIND_CHOICES = (("C", _("Category")),
-                    ("P", _("Product")),
-                    ("V", _("Product variation")))
+    CATEGORY = "c"
+    PRODUCT = "p"
+    VARIATION = "v"
+    KIND_CHOICES = ((CATEGORY, _("Category")),
+                    (PRODUCT, _("Product")),
+                    (VARIATION, _("Product variation")))
     name = models.CharField(_("Name"), max_length=128)
     kind = models.CharField(_("Kind"),
                             max_length=1,
@@ -46,9 +49,14 @@ class Node(MPTTModel):
     class MPTTMeta:
         order_insertion_by = ['name']
 
+    # TODO
+    #class Meta:
+    #    db_table = 'jimi_catalog'
+
     def __unicode__(self):
         return self.name
 
+    @property
     def price(self):
         """Accumulate price"""
         p = Money(0)
@@ -56,32 +64,45 @@ class Node(MPTTModel):
             p += n.price_fragment
         return p
 
-    def in_stock(self):
+    @property
+    def stock(self):
         """Accumulate stock"""
         c = 0
         for n in self.get_descendants(include_self=True):
             c += n.fragment_in_stock
         return c
 
+    @property
     def pending_customer(self):
         c = 0
         for n in self.get_descendants(include_self=True):
             c += n.fragment_pending_customer
         return c
 
+    @property
     def pending_supplier(self):
         c = 0
         for n in self.get_descendants(include_self=True):
             c += n.fragment_pending_supplier
         return c
 
+    @property
+    def stock_available(self):
+        return self.stock - self.pending_customer
+
+    @property
+    def in_stock(self):
+        return self.stock_available > 0
+
+    @property
     def is_procurable(self):
         """Determine if node could be purchased"""
-        if self.kind != "C" and self.is_leave_node():
+        if self.kind != Node.CATEGORY and self.is_leave_node():
             return True
         else:
             return False
 
+    @property
     def is_variation(self):
         """Determine if node is a product variation"""
         if self.is_leave_node() and self.parent.kind == "P":
@@ -89,16 +110,17 @@ class Node(MPTTModel):
         else:
             return False
 
+    @property
     def has_variations(self):
         """Determine if node is product with variations"""
-        if self.kind == "P" and not self.is_leave_node():
+        if self.kind == Node.PRODUCT and not self.is_leave_node():
             return True
         else:
             return False
 
     @models.permalink
     def get_absolute_url(self):
-        if self.kind == "V":  # Parent URL for variations
+        if self.kind == Node.VARIATION:  # Parent URL for variations
             return ("node", (), {'slug': self.get_ancestors(ascending=True)[0].slug})
         else:
             return ("node", (), {'slug': self.slug})
@@ -111,7 +133,7 @@ class Category(Node):
         verbose_name_plural = _("Categories")
 
     def save(self, *args, **kwargs):
-        self.kind = "C"
+        self.kind = self.CATEGORY
         super(Category, self).save(*args, **kwargs)
 
 
@@ -121,8 +143,8 @@ class Product(Node):
         proxy = True
 
     def save(self, *args, **kwargs):
-        if self.parent.kind == "P":
-            self.kind = "V"
+        if self.parent.kind == self.PRODUCT:
+            self.kind = self.VARIATION
         else:
-            self.kind = "P"
+            self.kind = self.PRODUCT
         super(Product, self).save(*args, **kwargs)

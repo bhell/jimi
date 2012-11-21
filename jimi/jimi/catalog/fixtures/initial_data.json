@@ -5,7 +5,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 4, 
-      "kind": "C", 
+      "kind": "c", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "bla", 
       "parent": null, 
@@ -30,7 +30,7 @@
     "fields": {
       "meta_description": "Hier steht ne Kurzbeschreibung", 
       "rght": 3, 
-      "kind": "C", 
+      "kind": "c", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "bla", 
       "parent": 7, 
@@ -55,7 +55,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 18, 
-      "kind": "C", 
+      "kind": "c", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "Description text", 
       "parent": null, 
@@ -80,7 +80,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 17, 
-      "kind": "C", 
+      "kind": "c", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "Klamottenbeschreibung", 
       "parent": 1, 
@@ -105,7 +105,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 6, 
-      "kind": "C", 
+      "kind": "c", 
       "meta_keywords": "bla, blubb", 
       "description": "bla", 
       "parent": 2, 
@@ -130,7 +130,7 @@
     "fields": {
       "meta_description": "Hier steht ne Kurzbeschreibung", 
       "rght": 5, 
-      "kind": "P", 
+      "kind": "p", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "bla", 
       "parent": 5, 
@@ -155,7 +155,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 8, 
-      "kind": "P", 
+      "kind": "p", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "text", 
       "parent": 2, 
@@ -180,7 +180,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 16, 
-      "kind": "P", 
+      "kind": "p", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "Text", 
       "parent": 2, 
@@ -205,7 +205,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 11, 
-      "kind": "V", 
+      "kind": "v", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "bla", 
       "parent": 3, 
@@ -230,7 +230,7 @@
     "fields": {
       "meta_description": "bla", 
       "rght": 13, 
-      "kind": "V", 
+      "kind": "v", 
       "meta_keywords": "bla", 
       "description": "bla", 
       "parent": 3, 
@@ -255,7 +255,7 @@
     "fields": {
       "meta_description": "Meta description", 
       "rght": 15, 
-      "kind": "V", 
+      "kind": "v", 
       "meta_keywords": "keyword 1, keyword 2", 
       "description": "bla", 
       "parent": 3, 

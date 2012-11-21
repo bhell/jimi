@@ -431,6 +431,8 @@ class MoneyField(models.CharField):
         except ValueError:
             msg = self.error_messages['invalid_format'] % value
             raise ValidationError(msg)
+        except AttributeError:  # NoneType cannot be split
+            return None
         try:
             amount = Decimal(a)
         except InvalidOperation:
