@@ -85,6 +85,9 @@ class MoneyTest(TestCase):
         self.price1 = fields.Money(amount=amount1)
         self.price2 = fields.Money(amount=amount2)
         self.assertEqual(self.price1 + self.price2, fields.Money(amount1 + amount2))
+        self.price3 = fields.Money()
+        self.price3 += self.price1
+        self.assertEqual(self.price3, self.price1)
 
     def test_sub(self):
         """Testing if __sub__ works"""

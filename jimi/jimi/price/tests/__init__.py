@@ -1,1 +1,1 @@
-from tests import CurrencyTest, MoneyTest, MoneyFieldTest
+from models import CurrencyTest, MoneyTest, MoneyFieldTest

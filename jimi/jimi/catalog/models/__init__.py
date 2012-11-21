@@ -1,6 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
-from jimi.price.fields import MoneyField
+from jimi.price.fields import Money, MoneyField
 from django.utils.translation import ugettext as _
 
 
@@ -50,12 +50,14 @@ class Node(MPTTModel):
         return self.name
 
     def price(self):
-        p = 0
+        """Accumulate price"""
+        p = Money(0)
         for n in self.get_ancestors(include_self=True):
             p += n.price_fragment
         return p
 
     def in_stock(self):
+        """Accumulate stock"""
         c = 0
         for n in self.get_descendants(include_self=True):
             c += n.fragment_in_stock

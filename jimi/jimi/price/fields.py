@@ -298,9 +298,9 @@ class Money(object):
         elif "code" in kwargs:
             self.currency = Currency(kwargs["code"])
 
-        if not self.amount:
+        if not isinstance(self.amount, Decimal):
             self.amount = Decimal("0.0")
-        if not self.currency:
+        if not isinstance(self.currency, Currency):
             self.currency = Currency()
 
     def __repr__(self):
@@ -330,7 +330,7 @@ class Money(object):
     def __add__(self, other):
         if not isinstance(other, Money):
             raise TypeError('Cannot add or subtract a ' +
-                            'Money and non-Money instance.')
+                            'Money (%s) and non-Money (type(%s) == %s) instance.' % (self, other, type(other)))
         if self.currency == other.currency:
             return Money(
                 amount=self.amount + other.amount,
