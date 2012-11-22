@@ -154,4 +154,6 @@ class Wishlist(ItemList):
 
 # TODO
 # Validate that only some product and variation nodes can be added to cart
+# Order status, and mostly readonly data for finished orders
+# Wishlist for purchase order and purchase order
 # Cron job to delete cart items from expired sessions
