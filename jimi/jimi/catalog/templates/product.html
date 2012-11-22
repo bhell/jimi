@@ -8,4 +8,10 @@
   <dt>Variations</dt><dd><ul>{% for c in variations %}<li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>{% endfor %}</ul></dd>
   <dt>URL</dt><dd>{{ node.get_absolute_url }}</dd>
 </dl>
+{% if form %}
+<form method="POST" action=".">{% csrf_token %}
+  {{ form.as_p }}
+  <p><input type="submit" value="Add to cart" name="submit" alt="Add to cart"/></p>
+</form>
+{% endif %}
 {% endblock body %}

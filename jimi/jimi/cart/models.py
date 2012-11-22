@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 from jimi.price.fields import MoneyField
-from jimi.catalog.models import Product
+from jimi.catalog.models import Node
+
+CART_ID_SESSION_KEY = 'cartident'
 
 
 class ItemList(models.Model):
@@ -108,7 +110,7 @@ class Item(models.Model):
                                  verbose_name=_("Cart/order/wishlist"),
                                  db_index=True,
                                  help_text=_("Related list"))
-    product = models.ForeignKey(Product,
+    product = models.ForeignKey(Node,
                                 verbose_name=_("Product"),
                                 db_index=True,
                                 help_text=_("Related product"))
@@ -125,6 +127,9 @@ class Item(models.Model):
     class Meta:
         db_table = 'jimi_listitem'
         ordering = ['created']
+
+    def __unicode__(self):
+        return "%s (%s)" % (self.product.name, self.quantity)
 
     @property
     def total(self):
