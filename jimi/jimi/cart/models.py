@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.contrib.sessions.models import Session
 from django.utils.translation import ugettext as _
 from jimi.price.fields import MoneyField
 from jimi.catalog.models import Product
@@ -18,32 +17,86 @@ class ItemList(models.Model):
     WISHLIST = "w"
     SAVED = "s"
     ORDER = "o"
-    KIND_CHOICES = ((CART, _("in cart")),
-                    (WISHLIST, _("in wish list")),
-                    (SAVED, _("saved for later")),
-                    (ORDER, _("ordered")))
-    ident = models.CharField(max_length=64,
+    _KIND_CHOICES = ((CART, _("Cart")),
+                     (WISHLIST, _("Wish list")),
+                     (SAVED, _("Saved for later")),
+                     (ORDER, _("Order")))
+    ident = models.AutoField(_("ID"),
                              db_index=True,
+                             primary_key=True,
                              help_text=_("Unique ID. Auto generated."))
-    kind = models.CharField(_("Status"),
+    kind = models.CharField(_("Kind"),
                             max_length=1,
-                            choices=KIND_CHOICES,
+                            choices=_KIND_CHOICES,
                             db_index=True,
-                            help_text=_("Status flag indicating if entry is in cart, wish list, purchased etc."))
-    session = models.ForeignKey(Session,
-                               db_index=True,
-                               blank=True,
-                               help_text=_("Session ID. Auto generated."))
+                            help_text=_("Flag indicating if entry is in cart, wish list, purchased etc."))
     user = models.ForeignKey(User,
                              db_index=True,
                              blank=True,
+                             null=True,
                              help_text=_("User owning cart"))
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+    @property
+    def latest_status(self):
+        return Status.objects.filter(itemlist__exact=self.ident).latest('created')
+
+    def __unicode__(self):
+        return "%s %s (%s: %s)" % (self.get_kind_display(), self.ident, self.updated, self.latest_status)
+
     class Meta:
-        db_table = 'jimi_cart'
+        db_table = 'jimi_list'
         ordering = ['created']
+
+    def save(self, *args, **kwargs):
+        """For a new List, an initial Status is generated."""
+        auto_status = False
+        if not self.ident:
+            auto_status = True
+        super(ItemList, self).save(*args, **kwargs)
+        if auto_status:
+            s = Status(status=Status.STATUS_NEW, itemlist=self)
+            s.save()
+
+
+class Status(models.Model):
+    """Status of order or purchase order lists"""
+    STATUS_NEW = 'n'
+    STATUS_PROCESSING = 'p'
+    STATUS_INVOICED = 'i'
+    STATUS_PAID = 'b'
+    STATUS_SENT = 's'
+    STATUS_DELIVERED = 'd'
+    STATUS_FINISHED = 'f'
+    STATUS_CANCELLED = 'x'
+    _STATUS_CHOICES = ((STATUS_NEW, _("new")),
+                       (STATUS_PROCESSING, _("processing")),
+                       (STATUS_INVOICED, _("invoiced")),
+                       (STATUS_PAID, _("paid")),
+                       (STATUS_SENT, _("sent")),
+                       (STATUS_DELIVERED, _("delivered")),
+                       (STATUS_FINISHED, _("finished")),
+                       (STATUS_CANCELLED, _("cancelled")))
+    status = models.CharField(_("Status"),
+                            max_length=1,
+                            choices=_STATUS_CHOICES,
+                            db_index=True,
+                            default=STATUS_NEW,
+                            help_text=_("Status flag indicating status of order, purchase order etc."))
+    itemlist = models.ForeignKey(ItemList,
+                                 verbose_name=_("Status"),
+                                 db_index=True,
+                                 help_text=_("Status flag"))
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'jimi_liststatus'
+        verbose_name_plural = _("Statuses")
+        ordering = ('created',)
+
+    def __unicode__(self):
+        return self.get_status_display()
 
 
 class Item(models.Model):
@@ -54,7 +107,7 @@ class Item(models.Model):
     itemlist = models.ForeignKey(ItemList,
                                  verbose_name=_("Cart/order/wishlist"),
                                  db_index=True,
-                                 help_text=_("Related cart"))
+                                 help_text=_("Related list"))
     product = models.ForeignKey(Product,
                                 verbose_name=_("Product"),
                                 db_index=True,
@@ -64,16 +117,18 @@ class Item(models.Model):
                                    default=1)
     orderprice = MoneyField(_("Price at order time"),
                             blank=True,
+                            null=True,
                             help_text=_("Product price when ordered, including discounts etc."))
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        db_table = 'jimi_cartitem'
+        db_table = 'jimi_listitem'
         ordering = ['created']
 
     @property
     def total(self):
+        # TODO take care of bulk discounts
         return self.quantity * self.price
 
     @property
@@ -110,6 +165,16 @@ class Item(models.Model):
         return self.product.get_absolute_url()
 
 
+class Wishlist(ItemList):
+    """Wish list."""
+    class Meta:
+        proxy = True
+
+    def save(self, *args, **kwargs):
+        self.kind = self.WISHLIST
+        super(Wishlist, self).save(*args, **kwargs)
+
+
 class Cart(ItemList):
     """Shopping cart."""
     class Meta:
@@ -142,15 +207,6 @@ class Order(ItemList):
             item.save()
         super(Order, self).save(*args, **kwargs)
 
-
-class Wishlist(ItemList):
-    """Wish list."""
-    class Meta:
-        proxy = True
-
-    def save(self, *args, **kwargs):
-        self.kind = self.WISHLIST
-        super(Wishlist, self).save(*args, **kwargs)
 
 # TODO
 # Validate that only some product and variation nodes can be added to cart

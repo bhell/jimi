@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import ItemList, Item, Cart, Order, Wishlist
+from models import ItemList, Item, Status, Cart, Order, Wishlist
 #from django.utils.translation import ugettext as _
 
 
@@ -7,14 +7,19 @@ class ItemInline(admin.TabularInline):
     model = Item
     can_delete = False  # deactivate instead
     extra = 1
-    readonly_fields = ("orderprice",)
+    readonly_fields = ("price", "orderprice", "total",)
 
+
+class StatusInline(admin.TabularInline):
+    model = Status
+    extra = 1
+    readonly_fields = ("created",)
 
 
 class ItemListAdmin(admin.ModelAdmin):
     exclude = ('kind',)
-    readonly_fields = ('ident', 'session', 'user', 'created', 'updated',)
-    inlines = (ItemInline,)
+    readonly_fields = ('ident', 'user', 'created', 'updated',)
+    inlines = (ItemInline, StatusInline,)
     # fieldsets = (
     #     (None, {
     #         'fields': ('ItemInline',)
