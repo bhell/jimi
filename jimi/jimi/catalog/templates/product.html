@@ -2,7 +2,7 @@
 {% load mptt_tags %}
 {% block body %}
 
-{{ node.name }} - {{ node.price }} - {{ node.in_stock }} in stock
+{{ node.name }} - {{ node.supplier }} - {{ node.price }} - {{ node.in_stock }} in stock
 <dl>
   <dt>Categories</dt><dd><ul>{% for c in ancestors %}<li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>{% endfor %}</ul></dd>
   <dt>Variations</dt><dd><ul>{% for c in variations %}<li><a href="{{ c.get_absolute_url }}">{{ c.name }}</a></li>{% endfor %}</ul></dd>

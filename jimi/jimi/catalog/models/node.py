@@ -37,9 +37,16 @@ class Node(MPTTModel):
                                         help_text=_("Content for description meta tag"))
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    _supplier = models.CharField(_("Supplier"),
+                                 max_length=255,
+                                 blank=True,
+                                 db_column="supplier",
+                                 help_text=_("Supplier for catalog node. Fallback to parent"
+                                          + " node supplier."))
     price_fragment = MoneyField(_("Price"),
                                 default=0.00,
-                                help_text=_("Total price is accumulated from fragments spanning categories, product and variation"))
+                                help_text=_("Total price is accumulated from fragments"
+                                         + " spanning categories, product and variation"))
     fragment_in_stock = models.IntegerField(_("Stock"),
                                             default=0,
                                             help_text=_("Number of items in stock"))
@@ -69,6 +76,19 @@ class Node(MPTTModel):
         for n in self.get_ancestors(include_self=True):
             p += n.price_fragment
         return p
+
+    @property
+    def supplier(self):
+        """Get supplier, either from node itself or from the first ancestor
+        where it is set."""
+        for n in self.get_ancestors(include_self=True, ascending=True):
+            if n._supplier:
+                return n._supplier
+        return None
+
+    @supplier.setter
+    def supplier(self, value):
+        self._supplier = value
 
     @property
     def stock(self):
