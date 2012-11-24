@@ -1,6 +1,6 @@
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
-from jimi.catalog.models import Node, Product, Category
+from jimi.catalog.models import Node, Product, Category, Variance, Variant
 
 
 class NodeAdmin(MPTTModelAdmin):
@@ -37,5 +37,20 @@ class ProductAdmin(NodeAdmin):
         return self.model.objects.filter(kind=Node.PRODUCT)
 
 
+class VariantInline(admin.TabularInline):
+    model = Variant
+    can_delete = False  # deactivate instead
+    extra = 4
+
+
+class VarianceAdmin(admin.ModelAdmin):
+    inlines = (VariantInline,)
+    list_display = ['internal_name',
+                    'name']
+    search_fields = ['name',
+                     'internal_name',
+                     'description']
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Variance, VarianceAdmin)

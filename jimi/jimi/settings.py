@@ -114,7 +114,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'jimi.catalog',
     'jimi.price',
-    'jimi.cart',
+    'jimi.lists',
     'south',
     'mptt',
 )

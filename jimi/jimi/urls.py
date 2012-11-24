@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'jimi.views.home', name='home'),
     url(_(r'^catalog/'), include('jimi.catalog.urls')),
-    url(_(r'^cart/'), include('jimi.cart.urls')),
+    url(_(r'^cart/'), include('jimi.lists.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

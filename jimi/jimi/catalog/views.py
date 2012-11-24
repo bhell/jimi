@@ -5,7 +5,7 @@ from django.core import urlresolvers
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from jimi.catalog.models import Node
-from jimi.cart.models import Item, Cart, CART_ID_SESSION_KEY
+from jimi.lists.models import Item, Cart, CART_ID_SESSION_KEY
 from jimi.catalog.forms import ProductAddToCartForm
 
 

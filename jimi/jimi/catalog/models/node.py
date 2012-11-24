@@ -1,5 +1,6 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from variance import Variant
 from jimi.price.fields import Money, MoneyField
 from django.utils.translation import ugettext as _
 
@@ -18,6 +19,10 @@ class Node(MPTTModel):
                             choices=KIND_CHOICES,
                             db_index=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children')
+    variant = models.ManyToManyField(Variant,
+                                     blank=True,
+                                     db_table="jimi_productvariant",
+                                     help_text=_("Variant of product"))
     slug = models.SlugField(max_length=128,
                             unique=True,
                             help_text=_("Unique text string for page URL. Created from name."))
@@ -51,7 +56,7 @@ class Node(MPTTModel):
         order_insertion_by = ['name']
 
     class Meta:
-    #    db_table = 'jimi_catalog'  # TODO
+        db_table = 'jimi_catalog'
         app_label = 'catalog'
 
     def __unicode__(self):
@@ -141,6 +146,8 @@ class Category(Node):
 
 class Product(Node):
     """Catalog nodes representing products or product variations"""
+    # TODO Does limit_choices_to work for parent restrictions?
+    # TODO Only Variations should be allowed to have a relation to Variant
     class Meta:
         proxy = True
         app_label = 'catalog'
