@@ -7,15 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 13:20+0100\n"
-"PO-Revision-Date: 2012-11-24 13:47+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-11-24 14:11+0100\n"
+"PO-Revision-Date: 2012-11-24 14:12+0100\n"
+"Last-Translator: Benjamin Hell <bhell@sent.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#: urls.py:12
+msgid "^catalog/"
+msgstr "^katalog/"
+
+#: urls.py:13
+msgid "^cart/"
+msgstr "^varukorg/"
 
 #: cart/models.py:22
 msgid "Cart"
