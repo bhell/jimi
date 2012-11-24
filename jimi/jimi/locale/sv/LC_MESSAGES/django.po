@@ -1,0 +1,969 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-24 13:20+0100\n"
+"PO-Revision-Date: 2012-11-24 13:47+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: cart/models.py:22
+msgid "Cart"
+msgstr ""
+
+#: cart/models.py:23
+msgid "Wish list"
+msgstr ""
+
+#: cart/models.py:24
+msgid "Saved for later"
+msgstr ""
+
+#: cart/models.py:25
+msgid "Order"
+msgstr ""
+
+#: cart/models.py:26
+msgid "ID"
+msgstr ""
+
+#: cart/models.py:29
+msgid "Unique ID. Auto generated."
+msgstr ""
+
+#: cart/models.py:30 catalog/models/__init__.py:16
+msgid "Kind"
+msgstr ""
+
+#: cart/models.py:34
+msgid "Flag indicating if entry is in cart, wish list, purchased etc."
+msgstr ""
+
+#: cart/models.py:39
+msgid "User owning cart"
+msgstr ""
+
+#: cart/models.py:75
+msgid "new"
+msgstr ""
+
+#: cart/models.py:76
+msgid "processing"
+msgstr ""
+
+#: cart/models.py:77
+msgid "invoiced"
+msgstr ""
+
+#: cart/models.py:78
+msgid "paid"
+msgstr ""
+
+#: cart/models.py:79
+msgid "sent"
+msgstr ""
+
+#: cart/models.py:80
+msgid "delivered"
+msgstr ""
+
+#: cart/models.py:81
+msgid "finished"
+msgstr ""
+
+#: cart/models.py:82
+msgid "cancelled"
+msgstr ""
+
+#: cart/models.py:83 cart/models.py:90
+msgid "Status"
+msgstr ""
+
+#: cart/models.py:88
+msgid "Status flag indicating status of order, purchase order etc."
+msgstr ""
+
+#: cart/models.py:92
+msgid "Status flag"
+msgstr ""
+
+#: cart/models.py:97
+msgid "Statuses"
+msgstr ""
+
+#: cart/models.py:106
+msgid "is active"
+msgstr ""
+
+#: cart/models.py:108
+msgid "deactivate to remove item"
+msgstr ""
+
+#: cart/models.py:110
+msgid "Cart/order/wishlist"
+msgstr ""
+
+#: cart/models.py:112
+msgid "Related list"
+msgstr ""
+
+#: cart/models.py:114 catalog/models/__init__.py:13
+msgid "Product"
+msgstr ""
+
+#: cart/models.py:116
+msgid "Related product"
+msgstr ""
+
+#: cart/models.py:118
+msgid "Quantity"
+msgstr ""
+
+#: cart/models.py:120
+msgid "Price at order time"
+msgstr ""
+
+#: cart/models.py:123
+msgid "Product price when ordered, including discounts etc."
+msgstr ""
+
+#: catalog/forms.py:11
+msgid "Please enter a valid quantity."
+msgstr ""
+
+#: catalog/forms.py:23
+msgid "Cookies must be enabled for shopping cart."
+msgstr ""
+
+#: catalog/models/__init__.py:12
+msgid "Category"
+msgstr ""
+
+#: catalog/models/__init__.py:14
+msgid "Product variation"
+msgstr ""
+
+#: catalog/models/__init__.py:15 price/models/taxes.py:35
+msgid "Name"
+msgstr ""
+
+#: catalog/models/__init__.py:23
+msgid "Unique text string for page URL. Created from name."
+msgstr ""
+
+#: catalog/models/__init__.py:24
+msgid "Teaser"
+msgstr ""
+
+#: catalog/models/__init__.py:25 price/models/taxes.py:36
+msgid "Description"
+msgstr ""
+
+#: catalog/models/__init__.py:26
+msgid "Is active"
+msgstr ""
+
+#: catalog/models/__init__.py:27
+msgid "Meta keywords"
+msgstr ""
+
+#: catalog/models/__init__.py:29
+msgid "Comma separated list of SEO keywords for meta tag"
+msgstr ""
+
+#: catalog/models/__init__.py:30
+msgid "Meta description"
+msgstr ""
+
+#: catalog/models/__init__.py:32
+msgid "Content for description meta tag"
+msgstr ""
+
+#: catalog/models/__init__.py:35
+msgid "Price"
+msgstr ""
+
+#: catalog/models/__init__.py:37
+msgid ""
+"Total price is accumulated from fragments spanning categories, product and "
+"variation"
+msgstr ""
+
+#: catalog/models/__init__.py:38
+msgid "Stock"
+msgstr ""
+
+#: catalog/models/__init__.py:40
+msgid "Number of items in stock"
+msgstr ""
+
+#: catalog/models/__init__.py:42
+msgid "Pending to customer"
+msgstr ""
+
+#: catalog/models/__init__.py:44
+msgid "Number of items pending to customer"
+msgstr ""
+
+#: catalog/models/__init__.py:45
+msgid "Pending from supplier"
+msgstr ""
+
+#: catalog/models/__init__.py:47
+msgid "Number of items pending from supplier"
+msgstr ""
+
+#: catalog/models/__init__.py:133
+msgid "Categories"
+msgstr ""
+
+#: price/fields.py:11
+msgid "UAE Dirham"
+msgstr ""
+
+#: price/fields.py:12
+msgid "Afghani"
+msgstr ""
+
+#: price/fields.py:13
+msgid "Lek"
+msgstr ""
+
+#: price/fields.py:14
+msgid "Armenian Dram"
+msgstr ""
+
+#: price/fields.py:15
+msgid "Netherlands Antillian Guilder"
+msgstr ""
+
+#: price/fields.py:16
+msgid "Kwanza"
+msgstr ""
+
+#: price/fields.py:17
+msgid "Argentine Peso"
+msgstr ""
+
+#: price/fields.py:18
+msgid "Australian Dollar"
+msgstr ""
+
+#: price/fields.py:19
+msgid "Aruban Guilder"
+msgstr ""
+
+#: price/fields.py:20
+msgid "Azerbaijanian Manat"
+msgstr ""
+
+#: price/fields.py:21
+msgid "Convertible Marks"
+msgstr ""
+
+#: price/fields.py:22
+msgid "Barbados Dollar"
+msgstr ""
+
+#: price/fields.py:23
+msgid "Taka"
+msgstr ""
+
+#: price/fields.py:24
+msgid "Bulgarian Lev"
+msgstr ""
+
+#: price/fields.py:25
+msgid "Bahraini Dinar"
+msgstr ""
+
+#: price/fields.py:26
+msgid "Burundi Franc"
+msgstr ""
+
+#: price/fields.py:27
+msgid "Bermudian Dollar"
+msgstr ""
+
+#: price/fields.py:28
+msgid "Brunei Dollar"
+msgstr ""
+
+#: price/fields.py:29
+msgid "Boliviano"
+msgstr ""
+
+#: price/fields.py:30
+msgid "Brazilian Real"
+msgstr ""
+
+#: price/fields.py:31
+msgid "Bahamian Dollar"
+msgstr ""
+
+#: price/fields.py:32
+msgid "Bhutanese ngultrum"
+msgstr ""
+
+#: price/fields.py:33
+msgid "Pula"
+msgstr ""
+
+#: price/fields.py:34
+msgid "Belarussian Ruble"
+msgstr ""
+
+#: price/fields.py:35
+msgid "Belize Dollar"
+msgstr ""
+
+#: price/fields.py:36
+msgid "Canadian Dollar"
+msgstr ""
+
+#: price/fields.py:37
+msgid "Congolese franc"
+msgstr ""
+
+#: price/fields.py:38
+msgid "Swiss Franc"
+msgstr ""
+
+#: price/fields.py:39
+msgid "Chilean peso"
+msgstr ""
+
+#: price/fields.py:40
+msgid "Yuan Renminbi"
+msgstr ""
+
+#: price/fields.py:41
+msgid "Colombian peso"
+msgstr ""
+
+#: price/fields.py:42
+msgid "Costa Rican Colon"
+msgstr ""
+
+#: price/fields.py:43
+msgid "Cuban convertible peso"
+msgstr ""
+
+#: price/fields.py:44
+msgid "Cuban Peso"
+msgstr ""
+
+#: price/fields.py:45
+msgid "Cape Verde Escudo"
+msgstr ""
+
+#: price/fields.py:46
+msgid "Czech Koruna"
+msgstr ""
+
+#: price/fields.py:47
+msgid "Djibouti Franc"
+msgstr ""
+
+#: price/fields.py:48
+msgid "Danish Krone"
+msgstr ""
+
+#: price/fields.py:49
+msgid "Dominican Peso"
+msgstr ""
+
+#: price/fields.py:50
+msgid "Algerian Dinar"
+msgstr ""
+
+#: price/fields.py:51
+msgid "Egyptian Pound"
+msgstr ""
+
+#: price/fields.py:52
+msgid "Nakfa"
+msgstr ""
+
+#: price/fields.py:53
+msgid "Ethiopian Birr"
+msgstr ""
+
+#: price/fields.py:54
+msgid "Euro"
+msgstr ""
+
+#: price/fields.py:55
+msgid "Fiji Dollar"
+msgstr ""
+
+#: price/fields.py:56
+msgid "Falkland Islands Pound"
+msgstr ""
+
+#: price/fields.py:57
+msgid "Pound Sterling"
+msgstr ""
+
+#: price/fields.py:58
+msgid "Lari"
+msgstr ""
+
+#: price/fields.py:59
+msgid "Ghana Cedi"
+msgstr ""
+
+#: price/fields.py:60
+msgid "Gibraltar Pound"
+msgstr ""
+
+#: price/fields.py:61
+msgid "Dalasi"
+msgstr ""
+
+#: price/fields.py:62
+msgid "Guinea Franc"
+msgstr ""
+
+#: price/fields.py:63
+msgid "Quetzal"
+msgstr ""
+
+#: price/fields.py:64
+msgid "Guyana Dollar"
+msgstr ""
+
+#: price/fields.py:65
+msgid "Hong Kong Dollar"
+msgstr ""
+
+#: price/fields.py:66
+msgid "Lempira"
+msgstr ""
+
+#: price/fields.py:67
+msgid "Croatian Kuna"
+msgstr ""
+
+#: price/fields.py:68
+msgid "Haitian gourde"
+msgstr ""
+
+#: price/fields.py:69
+msgid "Forint"
+msgstr ""
+
+#: price/fields.py:70
+msgid "Rupiah"
+msgstr ""
+
+#: price/fields.py:71
+msgid "New Israeli Sheqel"
+msgstr ""
+
+#: price/fields.py:72
+msgid "Isle of Man pount"
+msgstr ""
+
+#: price/fields.py:73
+msgid "Indian Rupee"
+msgstr ""
+
+#: price/fields.py:74
+msgid "Iraqi Dinar"
+msgstr ""
+
+#: price/fields.py:75
+msgid "Iranian Rial"
+msgstr ""
+
+#: price/fields.py:76
+msgid "Iceland Krona"
+msgstr ""
+
+#: price/fields.py:77
+msgid "Jamaican Dollar"
+msgstr ""
+
+#: price/fields.py:78
+msgid "Jordanian Dinar"
+msgstr ""
+
+#: price/fields.py:79
+msgid "Yen"
+msgstr ""
+
+#: price/fields.py:80
+msgid "Kenyan Shilling"
+msgstr ""
+
+#: price/fields.py:81
+msgid "Som"
+msgstr ""
+
+#: price/fields.py:82
+msgid "Riel"
+msgstr ""
+
+#: price/fields.py:83
+msgid "Comoro Franc"
+msgstr ""
+
+#: price/fields.py:84
+msgid "North Korean Won"
+msgstr ""
+
+#: price/fields.py:85
+msgid "Won"
+msgstr ""
+
+#: price/fields.py:86
+msgid "Kuwaiti Dinar"
+msgstr ""
+
+#: price/fields.py:87
+msgid "Cayman Islands Dollar"
+msgstr ""
+
+#: price/fields.py:88
+msgid "Tenge"
+msgstr ""
+
+#: price/fields.py:89
+msgid "Kip"
+msgstr ""
+
+#: price/fields.py:90
+msgid "Lebanese Pound"
+msgstr ""
+
+#: price/fields.py:91
+msgid "Sri Lanka Rupee"
+msgstr ""
+
+#: price/fields.py:92
+msgid "Liberian Dollar"
+msgstr ""
+
+#: price/fields.py:93
+msgid "Lesotho loti"
+msgstr ""
+
+#: price/fields.py:94
+msgid "Lithuanian Litas"
+msgstr ""
+
+#: price/fields.py:95
+msgid "Latvian Lats"
+msgstr ""
+
+#: price/fields.py:96
+msgid "Libyan Dinar"
+msgstr ""
+
+#: price/fields.py:97
+msgid "Moroccan Dirham"
+msgstr ""
+
+#: price/fields.py:98
+msgid "Moldovan Leu"
+msgstr ""
+
+#: price/fields.py:99
+msgid "Malagasy Ariary"
+msgstr ""
+
+#: price/fields.py:100
+msgid "Denar"
+msgstr ""
+
+#: price/fields.py:101
+msgid "Kyat"
+msgstr ""
+
+#: price/fields.py:102
+msgid "Tugrik"
+msgstr ""
+
+#: price/fields.py:103
+msgid "Pataca"
+msgstr ""
+
+#: price/fields.py:104
+msgid "Ouguiya"
+msgstr ""
+
+#: price/fields.py:105
+msgid "Mauritius Rupee"
+msgstr ""
+
+#: price/fields.py:106
+msgid "Rufiyaa"
+msgstr ""
+
+#: price/fields.py:107 price/fields.py:183
+msgid "Kwacha"
+msgstr ""
+
+#: price/fields.py:108
+msgid "Mexixan peso"
+msgstr ""
+
+#: price/fields.py:109
+msgid "Malaysian Ringgit"
+msgstr ""
+
+#: price/fields.py:110
+msgid "Metical"
+msgstr ""
+
+#: price/fields.py:111
+msgid "Namibian Dollar"
+msgstr ""
+
+#: price/fields.py:112
+msgid "Naira"
+msgstr ""
+
+#: price/fields.py:113
+msgid "Cordoba Oro"
+msgstr ""
+
+#: price/fields.py:114
+msgid "Norwegian Krone"
+msgstr ""
+
+#: price/fields.py:115
+msgid "Nepalese Rupee"
+msgstr ""
+
+#: price/fields.py:116
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: price/fields.py:117
+msgid "Rial Omani"
+msgstr ""
+
+#: price/fields.py:118
+msgid "Panamanian Balboa"
+msgstr ""
+
+#: price/fields.py:119
+msgid "Nuevo Sol"
+msgstr ""
+
+#: price/fields.py:120
+msgid "Kina"
+msgstr ""
+
+#: price/fields.py:121
+msgid "Philippine Peso"
+msgstr ""
+
+#: price/fields.py:122
+msgid "Pakistan Rupee"
+msgstr ""
+
+#: price/fields.py:123
+msgid "Zloty"
+msgstr ""
+
+#: price/fields.py:124
+msgid "Guarani"
+msgstr ""
+
+#: price/fields.py:125
+msgid "Qatari Rial"
+msgstr ""
+
+#: price/fields.py:126
+msgid "New Leu"
+msgstr ""
+
+#: price/fields.py:127
+msgid "Serbian Dinar"
+msgstr ""
+
+#: price/fields.py:128
+msgid "Russian Ruble"
+msgstr ""
+
+#: price/fields.py:129
+msgid "Rwanda Franc"
+msgstr ""
+
+#: price/fields.py:130
+msgid "Saudi Riyal"
+msgstr ""
+
+#: price/fields.py:131
+msgid "Solomon Islands Dollar"
+msgstr ""
+
+#: price/fields.py:132
+msgid "Seychelles Rupee"
+msgstr ""
+
+#: price/fields.py:133
+msgid "Sudanese Pound"
+msgstr ""
+
+#: price/fields.py:134
+msgid "Swedish Krona"
+msgstr ""
+
+#: price/fields.py:135
+msgid "Singapore Dollar"
+msgstr ""
+
+#: price/fields.py:136
+msgid "Saint Helena Pound"
+msgstr ""
+
+#: price/fields.py:137
+msgid "Slovak Koruna"
+msgstr ""
+
+#: price/fields.py:138
+msgid "Leone"
+msgstr ""
+
+#: price/fields.py:139
+msgid "Somali Shilling"
+msgstr ""
+
+#: price/fields.py:140
+msgid "Surinam Dollar"
+msgstr ""
+
+#: price/fields.py:141
+msgid "Dobra"
+msgstr ""
+
+#: price/fields.py:142
+msgid "Salvadoran Colon"
+msgstr ""
+
+#: price/fields.py:143
+msgid "Syrian Pound"
+msgstr ""
+
+#: price/fields.py:144
+msgid "Lilangeni"
+msgstr ""
+
+#: price/fields.py:145
+msgid "Baht"
+msgstr ""
+
+#: price/fields.py:146
+msgid "Somoni"
+msgstr ""
+
+#: price/fields.py:147
+msgid "Manat"
+msgstr ""
+
+#: price/fields.py:148
+msgid "Tunisian Dinar"
+msgstr ""
+
+#: price/fields.py:149
+msgid "Paanga"
+msgstr ""
+
+#: price/fields.py:150
+msgid "New Turkish Lira"
+msgstr ""
+
+#: price/fields.py:151
+msgid "Trinidad and Tobago Dollar"
+msgstr ""
+
+#: price/fields.py:152
+msgid "Tuvalu dollar"
+msgstr ""
+
+#: price/fields.py:153
+msgid "New Taiwan Dollar"
+msgstr ""
+
+#: price/fields.py:154
+msgid "Tanzanian Shilling"
+msgstr ""
+
+#: price/fields.py:155
+msgid "Hryvnia"
+msgstr ""
+
+#: price/fields.py:156
+msgid "Uganda Shilling"
+msgstr ""
+
+#: price/fields.py:157
+msgid "US Dollar"
+msgstr ""
+
+#: price/fields.py:158
+msgid "Uruguayan peso"
+msgstr ""
+
+#: price/fields.py:159
+msgid "Uzbekistan Sum"
+msgstr ""
+
+#: price/fields.py:160
+msgid "Venezuelan bolivar"
+msgstr ""
+
+#: price/fields.py:161
+msgid "Bolivar Fuerte"
+msgstr ""
+
+#: price/fields.py:162
+msgid "Dong"
+msgstr ""
+
+#: price/fields.py:163
+msgid "Vatu"
+msgstr ""
+
+#: price/fields.py:164
+msgid "Tala"
+msgstr ""
+
+#: price/fields.py:165
+msgid "CFA franc BEAC"
+msgstr ""
+
+#: price/fields.py:166
+msgid "Silver"
+msgstr ""
+
+#: price/fields.py:167
+msgid "Gold"
+msgstr ""
+
+#: price/fields.py:168
+msgid "Bond Markets Units European Composite Unit (EURCO)"
+msgstr ""
+
+#: price/fields.py:169
+msgid "European Monetary Unit (E.M.U.-6)"
+msgstr ""
+
+#: price/fields.py:170
+msgid "European Unit of Account 9(E.U.A.-9)"
+msgstr ""
+
+#: price/fields.py:171
+msgid "European Unit of Account 17(E.U.A.-17)"
+msgstr ""
+
+#: price/fields.py:172
+msgid "East Caribbean Dollar"
+msgstr ""
+
+#: price/fields.py:173
+msgid "SDR"
+msgstr ""
+
+#: price/fields.py:174
+msgid "Gold-Franc"
+msgstr ""
+
+#: price/fields.py:175
+msgid "UIC-Franc"
+msgstr ""
+
+#: price/fields.py:176
+msgid "CFA Franc BCEAO"
+msgstr ""
+
+#: price/fields.py:177
+msgid "Palladium"
+msgstr ""
+
+#: price/fields.py:178
+msgid "CFP Franc"
+msgstr ""
+
+#: price/fields.py:179
+msgid "Platinum"
+msgstr ""
+
+#: price/fields.py:180
+msgid "Codes specifically reserved for testing purposes"
+msgstr ""
+
+#: price/fields.py:181
+msgid "Yemeni Rial"
+msgstr ""
+
+#: price/fields.py:182
+msgid "Rand"
+msgstr ""
+
+#: price/fields.py:184
+msgid "Zimbabwe Dollar A/06"
+msgstr ""
+
+#: price/fields.py:185
+msgid "Zimbabwe dollar A/09"
+msgstr ""
+
+#: price/fields.py:186
+msgid "Zimbabwe dollar A/08"
+msgstr ""
+
+#: price/fields.py:410
+#, python-format
+msgid ""
+"'%s' value has an invalid format. It must be in XXXX.XX YYY format, with max "
+"17 significant figures X and a valid currency code YYY."
+msgstr ""
+
+#: price/fields.py:413
+#, python-format
+msgid "'%s' value has the correct format but it has an invalid amount."
+msgstr ""
+
+#: price/fields.py:415
+#, python-format
+msgid "'%s' value has the correct format but it has an invalid currency code."
+msgstr ""
+
+#: price/models/taxes.py:22
+msgid "ISO 2 letter country code"
+msgstr ""
+
+#: price/models/taxes.py:23
+msgid "Country name"
+msgstr ""
+
+#: price/models/taxes.py:27
+msgid "Countries"
+msgstr ""
+
+#: price/models/taxes.py:37
+msgid "Percent"
+msgstr ""
+
+#: price/models/taxes.py:40
+msgid "Tax percentage, typically ranging from 0 to 100."
+msgstr ""
+
+#: price/models/taxes.py:45
+msgid "Taxes"
+msgstr ""
