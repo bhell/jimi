@@ -5,17 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Jimi-DEV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-24 14:11+0100\n"
-"PO-Revision-Date: 2012-11-24 14:12+0100\n"
+"POT-Creation-Date: 2012-11-24 23:12+0100\n"
+"PO-Revision-Date: 2012-11-24 23:13+0100\n"
 "Last-Translator: Benjamin Hell <bhell@sent.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: urls.py:12
 msgid "^catalog/"
@@ -25,214 +26,250 @@ msgstr "^katalog/"
 msgid "^cart/"
 msgstr "^varukorg/"
 
-#: cart/models.py:22
-msgid "Cart"
-msgstr ""
-
-#: cart/models.py:23
-msgid "Wish list"
-msgstr ""
-
-#: cart/models.py:24
-msgid "Saved for later"
-msgstr ""
-
-#: cart/models.py:25
-msgid "Order"
-msgstr ""
-
-#: cart/models.py:26
-msgid "ID"
-msgstr ""
-
-#: cart/models.py:29
-msgid "Unique ID. Auto generated."
-msgstr ""
-
-#: cart/models.py:30 catalog/models/__init__.py:16
-msgid "Kind"
-msgstr ""
-
-#: cart/models.py:34
-msgid "Flag indicating if entry is in cart, wish list, purchased etc."
-msgstr ""
-
-#: cart/models.py:39
-msgid "User owning cart"
-msgstr ""
-
-#: cart/models.py:75
-msgid "new"
-msgstr ""
-
-#: cart/models.py:76
-msgid "processing"
-msgstr ""
-
-#: cart/models.py:77
-msgid "invoiced"
-msgstr ""
-
-#: cart/models.py:78
-msgid "paid"
-msgstr ""
-
-#: cart/models.py:79
-msgid "sent"
-msgstr ""
-
-#: cart/models.py:80
-msgid "delivered"
-msgstr ""
-
-#: cart/models.py:81
-msgid "finished"
-msgstr ""
-
-#: cart/models.py:82
-msgid "cancelled"
-msgstr ""
-
-#: cart/models.py:83 cart/models.py:90
-msgid "Status"
-msgstr ""
-
-#: cart/models.py:88
-msgid "Status flag indicating status of order, purchase order etc."
-msgstr ""
-
-#: cart/models.py:92
-msgid "Status flag"
-msgstr ""
-
-#: cart/models.py:97
-msgid "Statuses"
-msgstr ""
-
-#: cart/models.py:106
-msgid "is active"
-msgstr ""
-
-#: cart/models.py:108
-msgid "deactivate to remove item"
-msgstr ""
-
-#: cart/models.py:110
-msgid "Cart/order/wishlist"
-msgstr ""
-
-#: cart/models.py:112
-msgid "Related list"
-msgstr ""
-
-#: cart/models.py:114 catalog/models/__init__.py:13
-msgid "Product"
-msgstr ""
-
-#: cart/models.py:116
-msgid "Related product"
-msgstr ""
-
-#: cart/models.py:118
-msgid "Quantity"
-msgstr ""
-
-#: cart/models.py:120
-msgid "Price at order time"
-msgstr ""
-
-#: cart/models.py:123
-msgid "Product price when ordered, including discounts etc."
-msgstr ""
-
 #: catalog/forms.py:11
 msgid "Please enter a valid quantity."
-msgstr ""
+msgstr "Vänligen ange ett giltigt antal."
 
 #: catalog/forms.py:23
 msgid "Cookies must be enabled for shopping cart."
 msgstr ""
 
-#: catalog/models/__init__.py:12
+#: catalog/models/node.py:13
 msgid "Category"
 msgstr ""
 
-#: catalog/models/__init__.py:14
+#: catalog/models/node.py:14 lists/models.py:114
+msgid "Product"
+msgstr ""
+
+#: catalog/models/node.py:15
 msgid "Product variation"
 msgstr ""
 
-#: catalog/models/__init__.py:15 price/models/taxes.py:35
+#: catalog/models/node.py:16 catalog/models/variance.py:7
+#: catalog/models/variance.py:36 price/models/taxes.py:35
 msgid "Name"
 msgstr ""
 
-#: catalog/models/__init__.py:23
+#: catalog/models/node.py:17 lists/models.py:30
+msgid "Kind"
+msgstr ""
+
+#: catalog/models/node.py:25
+msgid "Variant of product"
+msgstr ""
+
+#: catalog/models/node.py:28
 msgid "Unique text string for page URL. Created from name."
 msgstr ""
 
-#: catalog/models/__init__.py:24
+#: catalog/models/node.py:29
 msgid "Teaser"
 msgstr ""
 
-#: catalog/models/__init__.py:25 price/models/taxes.py:36
+#: catalog/models/node.py:30 catalog/models/variance.py:16
+#: price/models/taxes.py:36
 msgid "Description"
 msgstr ""
 
-#: catalog/models/__init__.py:26
+#: catalog/models/node.py:31 catalog/models/variance.py:48
 msgid "Is active"
 msgstr ""
 
-#: catalog/models/__init__.py:27
+#: catalog/models/node.py:32
 msgid "Meta keywords"
 msgstr ""
 
-#: catalog/models/__init__.py:29
+#: catalog/models/node.py:34
 msgid "Comma separated list of SEO keywords for meta tag"
 msgstr ""
 
-#: catalog/models/__init__.py:30
+#: catalog/models/node.py:35
 msgid "Meta description"
 msgstr ""
 
-#: catalog/models/__init__.py:32
+#: catalog/models/node.py:37
 msgid "Content for description meta tag"
 msgstr ""
 
-#: catalog/models/__init__.py:35
+#: catalog/models/node.py:40
+msgid "Supplier"
+msgstr ""
+
+#: catalog/models/node.py:44
+msgid "Supplier for catalog node. Fallback to parent"
+msgstr ""
+
+#: catalog/models/node.py:46
 msgid "Price"
 msgstr ""
 
-#: catalog/models/__init__.py:37
-msgid ""
-"Total price is accumulated from fragments spanning categories, product and "
-"variation"
+#: catalog/models/node.py:48
+msgid "Total price is accumulated from fragments"
 msgstr ""
 
-#: catalog/models/__init__.py:38
+#: catalog/models/node.py:50
 msgid "Stock"
 msgstr ""
 
-#: catalog/models/__init__.py:40
+#: catalog/models/node.py:52
 msgid "Number of items in stock"
 msgstr ""
 
-#: catalog/models/__init__.py:42
+#: catalog/models/node.py:54
 msgid "Pending to customer"
 msgstr ""
 
-#: catalog/models/__init__.py:44
+#: catalog/models/node.py:56
 msgid "Number of items pending to customer"
 msgstr ""
 
-#: catalog/models/__init__.py:45
+#: catalog/models/node.py:57
 msgid "Pending from supplier"
 msgstr ""
 
-#: catalog/models/__init__.py:47
+#: catalog/models/node.py:59
 msgid "Number of items pending from supplier"
 msgstr ""
 
-#: catalog/models/__init__.py:133
+#: catalog/models/node.py:159
 msgid "Categories"
+msgstr ""
+
+#: catalog/models/variance.py:9
+msgid "Name of the variance visible"
+msgstr ""
+
+#: catalog/models/variance.py:11 catalog/models/variance.py:40
+msgid "Internal name"
+msgstr ""
+
+#: catalog/models/variance.py:14
+msgid "Name of the variance for"
+msgstr ""
+
+#: catalog/models/variance.py:38
+msgid "Name of the variant visible"
+msgstr ""
+
+#: catalog/models/variance.py:43
+msgid "Name of the variance for internal"
+msgstr ""
+
+#: catalog/models/variance.py:46
+msgid "Variance the variant"
+msgstr ""
+
+#: lists/models.py:22
+msgid "Cart"
+msgstr "Varukorg"
+
+#: lists/models.py:23
+msgid "Wish list"
+msgstr "Önskelista"
+
+#: lists/models.py:24
+msgid "Saved for later"
+msgstr ""
+
+#: lists/models.py:25
+msgid "Order"
+msgstr ""
+
+#: lists/models.py:26
+msgid "ID"
+msgstr ""
+
+#: lists/models.py:29
+msgid "Unique ID. Auto generated."
+msgstr ""
+
+#: lists/models.py:34
+msgid "Flag indicating if entry is in cart, wish list, purchased etc."
+msgstr ""
+
+#: lists/models.py:39
+msgid "User owning cart"
+msgstr ""
+
+#: lists/models.py:75
+msgid "new"
+msgstr ""
+
+#: lists/models.py:76
+msgid "processing"
+msgstr ""
+
+#: lists/models.py:77
+msgid "invoiced"
+msgstr ""
+
+#: lists/models.py:78
+msgid "paid"
+msgstr ""
+
+#: lists/models.py:79
+msgid "sent"
+msgstr ""
+
+#: lists/models.py:80
+msgid "delivered"
+msgstr ""
+
+#: lists/models.py:81
+msgid "finished"
+msgstr ""
+
+#: lists/models.py:82
+msgid "cancelled"
+msgstr ""
+
+#: lists/models.py:83 lists/models.py:90
+msgid "Status"
+msgstr ""
+
+#: lists/models.py:88
+msgid "Status flag indicating status of order, purchase order etc."
+msgstr ""
+
+#: lists/models.py:92
+msgid "Status flag"
+msgstr ""
+
+#: lists/models.py:97
+msgid "Statuses"
+msgstr ""
+
+#: lists/models.py:106
+msgid "is active"
+msgstr ""
+
+#: lists/models.py:108
+msgid "deactivate to remove item"
+msgstr ""
+
+#: lists/models.py:110
+msgid "Cart/order/wishlist"
+msgstr ""
+
+#: lists/models.py:112
+msgid "Related list"
+msgstr ""
+
+#: lists/models.py:116
+msgid "Related product"
+msgstr ""
+
+#: lists/models.py:118
+msgid "Quantity"
+msgstr ""
+
+#: lists/models.py:120
+msgid "Price at order time"
+msgstr ""
+
+#: lists/models.py:123
+msgid "Product price when ordered, including discounts etc."
 msgstr ""
 
 #: price/fields.py:11
@@ -241,7 +278,7 @@ msgstr ""
 
 #: price/fields.py:12
 msgid "Afghani"
-msgstr ""
+msgstr "Afghani"
 
 #: price/fields.py:13
 msgid "Lek"
@@ -935,19 +972,19 @@ msgstr ""
 msgid "Zimbabwe dollar A/08"
 msgstr ""
 
-#: price/fields.py:410
+#: price/fields.py:415
 #, python-format
 msgid ""
 "'%s' value has an invalid format. It must be in XXXX.XX YYY format, with max "
 "17 significant figures X and a valid currency code YYY."
 msgstr ""
 
-#: price/fields.py:413
+#: price/fields.py:418
 #, python-format
 msgid "'%s' value has the correct format but it has an invalid amount."
 msgstr ""
 
-#: price/fields.py:415
+#: price/fields.py:420
 #, python-format
 msgid "'%s' value has the correct format but it has an invalid currency code."
 msgstr ""

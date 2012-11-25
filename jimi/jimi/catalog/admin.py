@@ -4,7 +4,7 @@ from jimi.catalog.models import Node, Product, Category, Variance, Variant
 
 
 class NodeAdmin(MPTTModelAdmin):
-    list_display = ('name', 'created', 'updated',)
+    list_display = ('name', 'supplier', 'created', 'updated',)
     list_display_links = ('name',)
     list_per_page = 20
     ordering = ['name']
