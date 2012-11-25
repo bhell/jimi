@@ -43,19 +43,23 @@ class Node(MPTTModel):
                                  db_column="supplier",
                                  help_text=_("Supplier for catalog node. Fallback to parent"
                                           + " node supplier."))
-    price_fragment = MoneyField(_("Price"),
-                                default=0.00,
-                                help_text=_("Total price is accumulated from fragments"
-                                         + " spanning categories, product and variation"))
-    fragment_in_stock = models.IntegerField(_("Stock"),
-                                            default=0,
-                                            help_text=_("Number of items in stock"))
+    _price = MoneyField(_("Price"),
+                        default=0.00,
+                        db_column="price",
+                        help_text=_("Total price is accumulated from fragments"
+                                 + " spanning categories, product and variation"))
+    _stock = models.IntegerField(_("Stock"),
+                                 default=0,
+                                 db_column="stock",
+                                 help_text=_("Number of items in stock"))
     # TODO These two should be generated from Orders
-    fragment_pending_customer = models.IntegerField(_("Pending to customer"),
+    _pending_customer = models.IntegerField(_("Pending to customer"),
                                             default=0,
+                                            db_column="pending_customer",
                                             help_text=_("Number of items pending to customer"))
-    fragment_pending_supplier = models.IntegerField(_("Pending from supplier"),
+    _pending_supplier = models.IntegerField(_("Pending from supplier"),
                                             default=0,
+                                            db_column="pending_supplier",
                                             help_text=_("Number of items pending from supplier"))
     # TODO tax classification
 
@@ -74,8 +78,12 @@ class Node(MPTTModel):
         """Accumulate price"""
         p = Money(0)
         for n in self.get_ancestors(include_self=True):
-            p += n.price_fragment
+            p += n._price
         return p
+
+    @price.setter
+    def price(self, value):
+        self._price = value
 
     @property
     def supplier(self):
@@ -95,22 +103,34 @@ class Node(MPTTModel):
         """Accumulate stock"""
         c = 0
         for n in self.get_descendants(include_self=True):
-            c += n.fragment_in_stock
+            c += n._stock
         return c
+
+    @stock.setter
+    def stock(self, value):
+        self._stock = value
 
     @property
     def pending_customer(self):
         c = 0
         for n in self.get_descendants(include_self=True):
-            c += n.fragment_pending_customer
+            c += n._pending_customer
         return c
+
+    @pending_customer.setter
+    def pending_customer(self, value):
+        self._pending_customer = value
 
     @property
     def pending_supplier(self):
         c = 0
         for n in self.get_descendants(include_self=True):
-            c += n.fragment_pending_supplier
+            c += n._pending_supplier
         return c
+
+    @pending_supplier.setter
+    def pending_supplier(self, value):
+        self._pending_supplier = value
 
     @property
     def stock_available(self):
