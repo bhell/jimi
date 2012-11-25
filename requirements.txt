@@ -3,6 +3,7 @@ django
 South
 django-mptt
 django-countries
+docutils
 
 # Manual installation
 python-money
