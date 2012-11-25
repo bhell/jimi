@@ -10,18 +10,33 @@ from jimi.catalog.forms import ProductAddToCartForm
 
 
 def _add_to_cart(request):
+    """
+    Add leaf node to cart.
+
+    Use already existing cart in session. Make a new one if there
+    is no cart yet or if it cannot be found. The latter should only
+    happen when the cart got deleted in the database while the session
+    is still valid. This should not happen on production systems, but
+    the error will be cought anyways.
+    """
     postdata = request.POST.copy()
     slug = postdata.get('product', '')
     quantity = postdata.get('quantity', 1)
     product = get_object_or_404(Node, slug=slug)
-    if not request.session.get(CART_ID_SESSION_KEY):
+    _cart_found = False
+    if request.session.get(CART_ID_SESSION_KEY):
+        try:
+            cart = Cart.objects.get(pk=request.session[CART_ID_SESSION_KEY])
+            _cart_found = True
+        except Cart.DoesNotExist:
+            pass  # We'll make a new one.
+    if not _cart_found:
         cart = Cart()
         cart.kind = cart.CART
-        # TODO if user is logged in, set user
         cart.save()
         request.session[CART_ID_SESSION_KEY] = cart.ident
-    else:
-        cart = Cart.objects.get(pk=request.session[CART_ID_SESSION_KEY])
+    # TODO if user is logged in, set user
+
     cart_items = Item.objects.filter(itemlist=cart)
     already_in_cart = False
     for item in cart_items:  # TODO more elegant "if item in cart"
@@ -37,7 +52,12 @@ def _add_to_cart(request):
 
 
 def node(request, slug):
-    """Get node and it's decendants"""
+    """
+    View node and it's decendants.
+
+    Depending on whether the node is a category or a product,
+    different responses with different templates are generated.
+    """
     node = get_object_or_404(Node, slug=slug)
     # In case of product variation, get parent instead
     if node.kind == node.VARIATION:
@@ -83,6 +103,10 @@ def node(request, slug):
 
 
 def all_categories(request, slug=None):
-    """Get all gategories as trees"""
+    """
+    View all categories.
+
+    Go through the categories and present them as tree(s).
+    """
     c = {"categories": Node.objects.filter(kind="C")}
     return render_to_response("categories.html", c)
