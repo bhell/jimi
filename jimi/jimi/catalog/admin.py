@@ -4,7 +4,7 @@ from jimi.catalog.models import Node, Product, Category, Variance, Variant
 
 
 class NodeAdmin(MPTTModelAdmin):
-    list_display = ('name', 'created', 'updated',)
+    list_display = ('name', 'supplier', 'created', 'updated',)
     list_display_links = ('name',)
     list_per_page = 20
     ordering = ['name']
@@ -23,7 +23,7 @@ class NodeAdmin(MPTTModelAdmin):
 
 class CategoryAdmin(NodeAdmin):
     #def __init__(self):
-    #self.exclude += ("fragment_in_stock", "fragment_pending_customer", "fragment_pending_supplier",)
+    #self.exclude += ("_stock", "_pending_customer", "_pending_supplier",)
 
     def queryset(self, request):
         return self.model.objects.filter(kind=Node.CATEGORY)
@@ -31,7 +31,7 @@ class CategoryAdmin(NodeAdmin):
 
 class ProductAdmin(NodeAdmin):
     #if not self.is_leave_node():
-    #    exclude += ("fragment_in_stock", "fragment_pending_customer", "fragment_pending_supplier",)
+    #    exclude += ("_stock", "_pending_customer", "_pending_supplier",)
 
     def queryset(self, request):
         return self.model.objects.filter(kind=Node.PRODUCT)
