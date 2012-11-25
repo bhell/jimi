@@ -1,1 +1,1 @@
-from taxes import Country, Tax
+from tax import Country, Tax
